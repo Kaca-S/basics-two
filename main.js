@@ -23,10 +23,10 @@ const userAccount = {
         this.balance -= moneyOut;
         alert (`Withdrawal successful! Your new balance is $${this.balance}`);
     } else {
-        alert("Insufficient balance! Please enter an amount less than or equal to your current balance.");
+        this.accountError("Insufficient balance! Please enter an amount less than or equal to your current balance.");
     }
     }else {
-        alert("Please enter a valid positive number.");
+        this.accountError("Please enter a valid positive number.");
         }
     },
 
