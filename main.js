@@ -42,6 +42,8 @@ const userAccount = {
   function exitAccount() {
     alert(`Exiting the account. Thank you for using the ATM!`);
 }
+/*while loop (Transaction) to allow the user multiple transactions until they choose to exit.
+The loop lasts as long as Transaction is true. false when the user selects 5.) exit.*/
 
 function atm() {
     let transaction = true;
