@@ -44,16 +44,30 @@ const userAccount = {
 }
 
 function atm() {
-const message = parseFloat(prompt("Select a choice 1.) See balance 2.) Make a deposit 3.) Make a withdrawal 4.) Get account name 5.) Exit"));
+    let transaction = true;
 
-switch (message) {
+    while (transaction) {
+    const message = parseFloat(prompt("Select a choice 1.) See balance 2.) Make a deposit 3.) Make a withdrawal 4.) Get account name 5.) Exit"));
+
+    switch (message) {
     case 1: userAccount.getBalance();
-    case 2: userAccount.deposit();   
+        break;
+    case 2: userAccount.deposit();  
+        break;
     case 3: userAccount.withdrawal();
+        break;
     case 4: userAccount.getAccountName();
-    case 5: userAccount.accountError();
+        break;
+    case 5: exitAccount();
+        transaction = false;
+        break;
+    default:
+        userAccount.accountError("Invalid choice. Please select a valid option.");
+        break;
+      }
     }
 }
+
 atm();
 
 
